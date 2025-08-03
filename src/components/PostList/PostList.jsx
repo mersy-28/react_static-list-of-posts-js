@@ -1,11 +1,17 @@
 import React from 'react';
-import { PostInfo } from '../PostInfo';
+import PostInformation from '../PostInfo';
 import './PostList.scss';
 
-export const PostList = ({ posts }) => (
-  <section className="PostList">
-    {posts.map(post => (
-      <PostInfo key={post.id} post={post} />
-    ))}
-  </section>
-);
+export function PostList({ posts }) {
+  return (
+    <ul className="PostList">
+      {posts.map(p => (
+        <li key={p.id}>
+          <PostInformation post={p} />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export default PostList;

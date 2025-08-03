@@ -1,9 +1,16 @@
 import React from 'react';
 import './CommentInfo.scss';
 
-export const CommentInfo = ({ comment }) => (
-  <div className="CommentInfo">
-    <h3 className="CommentInfo__name">{comment.name}</h3>
-    <p className="CommentInfo__body">{comment.body}</p>
-  </div>
-);
+export function CommentInfo({ comment }) {
+  return (
+    <div className="CommentInfo">
+      <div className="CommentInfo__name">{comment.name}</div>
+      <a className="CommentInfo__email" href={`mailto:${comment.email}`}>
+        {comment.email}
+      </a>
+      <div className="CommentInfo__body">{comment.body}</div>
+    </div>
+  );
+}
+
+export default CommentInfo;

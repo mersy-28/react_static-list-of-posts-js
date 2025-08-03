@@ -1,1 +1,4 @@
-export { UserInfo } from './UserInfo';
+import UserInfoDefault, { UserInfo } from './UserInfo';
+
+export default UserInfoDefault;
+export { UserInfo };

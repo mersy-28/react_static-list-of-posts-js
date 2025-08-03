@@ -1,9 +1,13 @@
+// src/components/UserInfo/UserInfo.jsx
 import React from 'react';
 import './UserInfo.scss';
 
-export const UserInfo = ({ user }) => (
-  <div className="UserInfo">
-    <p className="UserInfo__name">{user.name}</p>
-    <p className="UserInfo__email">{user.email}</p>
-  </div>
-);
+export function UserInfo({ user }) {
+  return (
+    <a className="UserInfo" href={`mailto:${user.email}`}>
+      {user.name}
+    </a>
+  );
+}
+
+export default UserInfo;
