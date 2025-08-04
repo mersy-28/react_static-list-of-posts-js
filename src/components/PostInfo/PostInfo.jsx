@@ -1,6 +1,6 @@
 import React from 'react';
-import UserInformation from '../UserInfo';
-import CommentLists from '../CommentList';
+import { UserInfo } from '../UserInfo';
+import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 
 export function PostInfo({ post }) {
@@ -9,11 +9,11 @@ export function PostInfo({ post }) {
       <div className="PostInfo__header">
         <h2 className="PostInfo__title">{post.title}</h2>
         <p className="PostInfo__body">{post.body}</p>
-        <UserInformation user={post.user} />
+        <UserInfo user={post.user} />
       </div>
 
       {post.comments.length > 0 ? (
-        <CommentLists comments={post.comments} />
+        <CommentList comments={post.comments} />
       ) : (
         <div data-cy="NoCommentsMessage">No comments</div>
       )}

@@ -1,5 +1,5 @@
 import React from 'react';
-import PostInformation from '../PostInfo';
+import { PostInfo } from '../PostInfo';
 import './PostList.scss';
 
 export function PostList({ posts }) {
@@ -7,7 +7,7 @@ export function PostList({ posts }) {
     <ul className="PostList">
       {posts.map(p => (
         <li key={p.id}>
-          <PostInformation post={p} />
+          <PostInfo post={p} />
         </li>
       ))}
     </ul>

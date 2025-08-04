@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentInformation from '../CommentInfo';
+import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 export function CommentList({ comments }) {
@@ -11,7 +11,7 @@ export function CommentList({ comments }) {
     <ul className="CommentList">
       {comments.map(c => (
         <li key={c.id}>
-          <CommentInformation comment={c} />
+          <CommentInfo comment={c} />
         </li>
       ))}
     </ul>
